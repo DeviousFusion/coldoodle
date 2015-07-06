@@ -9,7 +9,7 @@
 //Implementation of an idea by Prof Braino to inform user that any changes made
 //to this build by the user have been successfully uploaded into firmware.
 #define STRING_VERSION_CONFIG_H __DATE__ "Jul 9 2014" __TIME__ // build date and time
-#define STRING_CONFIG_H_AUTHOR "RJD" //Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "DeviousFusion" //Who made the changes.
 
 // SERIAL_PORT selects which serial port should be used for communication with the host.
 // This allows the connection of wireless adapters (for instance) to non-default port pins.
@@ -49,6 +49,9 @@
 #define MOTHERBOARD 81
 #endif
 
+// Define this to set a custom name for your generic Mendel,
+#define CUSTOM_MENDEL_NAME "Coldoodle"
+
 //// The following define selects which power supply you have. Please choose the one that matches your setup
 // 1 = ATX
 // 2 = X-Box 360 203Watts (the blue wire connected to PS_ON and the red wire to VCC)
@@ -85,7 +88,7 @@
 #define TEMP_SENSOR_0 1
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
-#define TEMP_SENSOR_BED 1
+#define TEMP_SENSOR_BED 0
 
 // Actual temperature must be close to target for this long before M109 returns success
 #define TEMP_RESIDENCY_TIME 5	// (seconds)
@@ -179,8 +182,10 @@
 //if PREVENT_DANGEROUS_EXTRUDE is on, you can still disable (uncomment) very long bits of extrusion separately.
 #define PREVENT_LENGTHY_EXTRUDE
 
-#define EXTRUDE_MINTEMP 145
+#define EXTRUDE_MINTEMP .0 // Allow cold extrusion by default
 #define EXTRUDE_MAXLENGTH (X_MAX_LENGTH+Y_MAX_LENGTH) //prevent extrusion of very large distances.
+
+#define DISABLE_TEMP_SENSOR true
 
 //===========================================================================
 //=============================Mechanical Settings===========================
