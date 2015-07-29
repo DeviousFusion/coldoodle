@@ -805,7 +805,6 @@ void disable_heater()
 }
 
 void max_temp_error(uint8_t e) {
-  if(DISABLE_TEMP_SENSOR == false) {
     disable_heater();
     if(IsStopped() == false) {
       SERIAL_ERROR_START;
@@ -816,11 +815,9 @@ void max_temp_error(uint8_t e) {
     #ifndef BOGUS_TEMPERATURE_FAILSAFE_OVERRIDE
     Stop();
     #endif
-  }
 }
 
-void min_temp_error(uint8_t e) {
-  if(DISABLE_TEMP_SENSOR == false) {
+void min_temp_error(uint8_t e) {  
     disable_heater();
     if(IsStopped() == false) {
       SERIAL_ERROR_START;
@@ -831,11 +828,10 @@ void min_temp_error(uint8_t e) {
     #ifndef BOGUS_TEMPERATURE_FAILSAFE_OVERRIDE
     Stop();
     #endif
-  }
 }
 
 void bed_max_temp_error(void) {
-  if(DISABLE_TEMP_SENSOR == false) {
+  if(DISABLE_BED_TEMP_SENSOR == false) {
     #if HEATER_BED_PIN > -1
       WRITE(HEATER_BED_PIN, 0);
     #endif

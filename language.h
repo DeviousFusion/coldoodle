@@ -23,9 +23,9 @@
 #endif 
 
 #define PROTOCOL_VERSION "1.0"
-#define FIRMWARE_URL "http://www.solidoodle.com/how-to-2/how-to-update-firmware/"
+#define FIRMWARE_URL "NA"
 
-#define MACHINE_NAME "Solidoodle_3"
+#define MACHINE_NAME "Cube3D"
 
 #if MOTHERBOARD == 62
 	#define SOLI_BOARD "Sanguinololu"
@@ -33,6 +33,7 @@
 
 #if MOTHERBOARD == 81
 	#define SOLI_BOARD "Printrboard"
+  #define MOD_TYPE "SoliCube3D"
 
 #endif
 
@@ -150,7 +151,7 @@
 	#define MSG_HEATING_COMPLETE "Heating done."
 	#define MSG_BED_HEATING "Bed Heating."
 	#define MSG_BED_DONE "Bed done."
-	#define MSG_M115_REPORT "COLDOODLE_FIRMWARE_NAME:Marlin V1; Sprinter/grbl mashup for " SOLI_BOARD " FIRMWARE_URL:" FIRMWARE_URL " PROTOCOL_VERSION:" PROTOCOL_VERSION " MACHINE_TYPE:" MACHINE_NAME " EXTRUDER_COUNT:" STRINGIFY(EXTRUDERS) "\n"
+	#define MSG_M115_REPORT "FIRMWARE_NAME:Marlin V1; Sprinter/grbl mashup for " SOLI_BOARD " - " MOD_TYPE " FIRMWARE_URL:" FIRMWARE_URL " PROTOCOL_VERSION:" PROTOCOL_VERSION " MACHINE_TYPE:" MACHINE_NAME " EXTRUDER_COUNT:" STRINGIFY(EXTRUDERS) "\n"
 	#define MSG_COUNT_X " Count X: "
 	#define MSG_ERR_KILLED "Printer halted. kill() called!"
 	#define MSG_ERR_STOPPED "Printer stopped due to errors. Fix the error and use M999 to restart. (Temperature is reset. Set it after restarting)"
@@ -305,7 +306,7 @@
 	#define MSG_HEATING_COMPLETE "Nagrzewanie ekstrudera zakonczone."
 	#define MSG_BED_HEATING "Nagrzewanie loza..."
 	#define MSG_BED_DONE "Nagrzewanie loza zakonczone."
-	#define MSG_M115_REPORT "FIRMWARE_NAME:Marlin V1; Sprinter/grbl mashup for " SOLI_BOARD " FIRMWARE_URL:" FIRMWARE_URL " PROTOCOL_VERSION:" PROTOCOL_VERSION " MACHINE_TYPE:" MACHINE_NAME " EXTRUDER_COUNT:" STRINGIFY(EXTRUDERS) "\n"
+	#define MSG_M115_REPORT "FIRMWARE_NAME:Marlin V1; Sprinter/grbl mashup for " SOLI_BOARD " - " MOD_TYPE " FIRMWARE_URL:" FIRMWARE_URL " PROTOCOL_VERSION:" PROTOCOL_VERSION " MACHINE_TYPE:" MACHINE_NAME " EXTRUDER_COUNT:" STRINGIFY(EXTRUDERS) "\n"
 	#define MSG_COUNT_X " Liczenie X: "
 	#define MSG_ERR_KILLED "Drukarka zatrzymana. Wywolano kill()"
 	#define MSG_ERR_STOPPED "Drukarka zatrzymana z powodu bledu. Usun problem i zrestartuj drukartke komenda M999. (temperatura zostala zresetowana; ustaw temperature po restarcie)"
@@ -465,7 +466,7 @@
 #define MSG_HEATING_COMPLETE "Chauffe terminee."
 #define MSG_BED_HEATING "Chauffe du lit."
 #define MSG_BED_DONE "Chauffe du lit terminee."
-#define MSG_M115_REPORT "FIRMWARE_NAME:Marlin V1; Sprinter/grbl mashup for " SOLI_BOARD " FIRMWARE_URL:" FIRMWARE_URL " PROTOCOL_VERSION:" PROTOCOL_VERSION " MACHINE_TYPE:" MACHINE_NAME " EXTRUDER_COUNT:" STRINGIFY(EXTRUDERS) "\n"
+#define MSG_M115_REPORT "FIRMWARE_NAME:Marlin V1; Sprinter/grbl mashup for " SOLI_BOARD " - " MOD_TYPE " FIRMWARE_URL:" FIRMWARE_URL " PROTOCOL_VERSION:" PROTOCOL_VERSION " MACHINE_TYPE:" MACHINE_NAME " EXTRUDER_COUNT:" STRINGIFY(EXTRUDERS) "\n"
 #define MSG_COUNT_X " Compteur X: "
 #define MSG_ERR_KILLED "Impression arretee. kill() appelee!"
 #define MSG_ERR_STOPPED "Impression arretee a cause d'erreurs. Corriger les erreurs et utiliser M999 pour la reprendre. (Temperature remise a zero. Reactivez la apres redemarrage)"
@@ -623,7 +624,7 @@
 	#define MSG_HEATING_COMPLETE "Heating done."
 	#define MSG_BED_HEATING "Bed Heating."
 	#define MSG_BED_DONE "Bed done."
-	#define MSG_M115_REPORT "FIRMWARE_NAME:Marlin V1; Sprinter/grbl mashup for " SOLI_BOARD " FIRMWARE_URL:" FIRMWARE_URL " PROTOCOL_VERSION:" PROTOCOL_VERSION " MACHINE_TYPE:" MACHINE_NAME " EXTRUDER_COUNT:" STRINGIFY(EXTRUDERS) "\n"
+	#define MSG_M115_REPORT "FIRMWARE_NAME:Marlin V1; Sprinter/grbl mashup for " SOLI_BOARD " - " MOD_TYPE " FIRMWARE_URL:" FIRMWARE_URL " PROTOCOL_VERSION:" PROTOCOL_VERSION " MACHINE_TYPE:" MACHINE_NAME " EXTRUDER_COUNT:" STRINGIFY(EXTRUDERS) "\n"
 	#define MSG_COUNT_X " Count X:"
 	#define MSG_ERR_KILLED "Printer halted. kill() called !!"
 	#define MSG_ERR_STOPPED "Printer stopped due to errors. Fix the error and use M999 to restart!"
@@ -781,7 +782,7 @@
 #define MSG_HEATING_COMPLETE "Calentamiento Hecho."
 #define MSG_BED_HEATING "Calentando la base."
 #define MSG_BED_DONE "Base Caliente."
-#define MSG_M115_REPORT "FIRMWARE_NAME:Marlin V1; Sprinter/grbl mashup for " SOLI_BOARD " FIRMWARE_URL:" FIRMWARE_URL " PROTOCOL_VERSION:" PROTOCOL_VERSION " MACHINE_TYPE:" MACHINE_NAME " EXTRUDER_COUNT:" STRINGIFY(EXTRUDERS) "\n"
+#define MSG_M115_REPORT "FIRMWARE_NAME:Marlin V1; Sprinter/grbl mashup for " SOLI_BOARD " - " MOD_TYPE " FIRMWARE_URL:" FIRMWARE_URL " PROTOCOL_VERSION:" PROTOCOL_VERSION " MACHINE_TYPE:" MACHINE_NAME " EXTRUDER_COUNT:" STRINGIFY(EXTRUDERS) "\n"
 #define MSG_COUNT_X " Cuenta X:"
 #define MSG_ERR_KILLED "Â¡Â¡Impresora Parada con kill()!!"
 #define MSG_ERR_STOPPED "Â¡Impresora parada por errores. Arregle el error y use M999 Para reiniciar!. (La temperatura se reestablece. Ajustela antes de continuar)"
@@ -932,7 +933,7 @@
 #define MSG_HEATING_COMPLETE				"Ð�Ð°Ñ€Ð³ÐµÑ‚Ð¾.    "
 #define MSG_BED_HEATING						"Ð�Ð°Ð³Ñ€ÐµÐ² Ñ�Ñ‚Ð¾Ð»Ð°...     "
 #define MSG_BED_DONE						"Ð¡Ñ‚Ð¾Ð» Ð½Ð°Ð³Ñ€ÐµÑ‚.        "
-#define MSG_M115_REPORT						"FIRMWARE_NAME:Marlin V1; Sprinter/grbl mashup for " SOLI_BOARD " FIRMWARE_URL:" FIRMWARE_URL " PROTOCOL_VERSION:" PROTOCOL_VERSION " MACHINE_TYPE:" MACHINE_NAME " EXTRUDER_COUNT:" STRINGIFY(EXTRUDERS) "\n"
+#define MSG_M115_REPORT						"FIRMWARE_NAME:Marlin V1; Sprinter/grbl mashup for " SOLI_BOARD " - " MOD_TYPE " FIRMWARE_URL:" FIRMWARE_URL " PROTOCOL_VERSION:" PROTOCOL_VERSION " MACHINE_TYPE:" MACHINE_NAME " EXTRUDER_COUNT:" STRINGIFY(EXTRUDERS) "\n"
 #define MSG_COUNT_X							" Count X:"
 #define MSG_ERR_KILLED						"ÐŸÑ€Ð¸Ð½Ñ‚ÐµÑ€ Ð¾Ñ�Ñ‚Ð°Ð½Ð¾Ð²Ð»ÐµÐ½. Ð²Ñ‹Ð·Ð¾Ð² kill() !!"
 #define MSG_ERR_STOPPED						"ÐžÑˆÐ¸Ð±ÐºÐ° Ð¿Ñ€Ð¸Ð½Ñ‚ÐµÑ€Ð°, Ð¾Ñ�Ñ‚Ð°Ð½Ð¾Ð². Ð£Ñ�Ñ‚Ñ€Ð°Ð½Ð¸Ñ‚Ðµ Ð½ÐµÐ¸Ñ�Ð¿Ñ€Ð°Ð²Ð½Ð¾Ñ�Ñ‚ÑŒ Ð¸ Ð¸Ñ�Ð¿Ð¾Ð»ÑŒÐ·ÑƒÐ¹Ñ‚Ðµ M999 Ð´Ð»Ñ� Ð¿ÐµÑ€ÐµÐ·Ð°Ð³Ñ€ÑƒÐ·ÐºÐ¸!. (Ð¢ÐµÐ¼Ð¿ÐµÑ€Ð°Ñ‚ÑƒÑ€Ð° Ð½ÐµÐ´Ð¾Ñ�Ñ‚ÑƒÐ¿Ð½Ð°. ÐŸÑ€Ð¾Ð²ÐµÑ€ÑŒÑ‚Ðµ Ð´Ð°Ñ‚Ñ‡Ð¸ÐºÐ¸)"
@@ -1091,7 +1092,7 @@
 	#define MSG_HEATING_COMPLETE     "Riscaldamento concluso."
 	#define MSG_BED_HEATING          "Riscaldamento Piatto."
 	#define MSG_BED_DONE             "Piatto Pronto."
-	#define MSG_M115_REPORT          "FIRMWARE_NAME:Marlin V1; Sprinter/grbl mashup for " SOLI_BOARD " FIRMWARE_URL:" FIRMWARE_URL " PROTOCOL_VERSION:" PROTOCOL_VERSION " MACHINE_TYPE:" MACHINE_NAME " EXTRUDER_COUNT:" STRINGIFY(EXTRUDERS) "\n"
+	#define MSG_M115_REPORT          "FIRMWARE_NAME:Marlin V1; Sprinter/grbl mashup for " SOLI_BOARD " - " MOD_TYPE " FIRMWARE_URL:" FIRMWARE_URL " PROTOCOL_VERSION:" PROTOCOL_VERSION " MACHINE_TYPE:" MACHINE_NAME " EXTRUDER_COUNT:" STRINGIFY(EXTRUDERS) "\n"
 	#define MSG_COUNT_X              " Calcola X:"
 	#define MSG_ERR_KILLED           "Stampante Calda. kill() chiamata !!"
 	#define MSG_ERR_STOPPED          "Stampante fermata a causa di errori. Risolvi l'errore e usa M999 per ripartire!. (Reset temperatura. Impostala prima di ripartire)"
@@ -1253,7 +1254,7 @@
 	#define MSG_HEATING_COMPLETE "Aquecido."
 	#define MSG_BED_HEATING "Aquecendo a Base."
 	#define MSG_BED_DONE "Base quente."
-	#define MSG_M115_REPORT "FIRMWARE_NAME:Marlin V1; Sprinter/grbl mashup for " SOLI_BOARD " FIRMWARE_URL:" FIRMWARE_URL " PROTOCOL_VERSION:" PROTOCOL_VERSION " MACHINE_TYPE:" MACHINE_NAME " EXTRUDER_COUNT:" STRINGIFY(EXTRUDERS) "\n"
+	#define MSG_M115_REPORT "FIRMWARE_NAME:Marlin V1; Sprinter/grbl mashup for " SOLI_BOARD " - " MOD_TYPE " FIRMWARE_URL:" FIRMWARE_URL " PROTOCOL_VERSION:" PROTOCOL_VERSION " MACHINE_TYPE:" MACHINE_NAME " EXTRUDER_COUNT:" STRINGIFY(EXTRUDERS) "\n"
 	#define MSG_COUNT_X " Conta X:"
 	#define MSG_ERR_KILLED "Impressora parada com kill() !!"
 	#define MSG_ERR_STOPPED "Impressora parada por erros. Coserte o erro e use M999 para recomeÃ§ar!. (Temperatura reiniciada. Ajuste antes de recomeÃ§ar)"
@@ -1410,7 +1411,7 @@
 	#define MSG_HEATING_COMPLETE "Lammitys valmis."
 	#define MSG_BED_HEATING "Alusta lampiaa."
 	#define MSG_BED_DONE "Alusta valmis."
-	#define MSG_M115_REPORT "FIRMWARE_NAME:Marlin V1; Sprinter/grbl mashup for " SOLI_BOARD " FIRMWARE_URL:" FIRMWARE_URL " PROTOCOL_VERSION:" PROTOCOL_VERSION " MACHINE_TYPE:" MACHINE_NAME " EXTRUDER_COUNT:" STRINGIFY(EXTRUDERS) "\n"
+	#define MSG_M115_REPORT "FIRMWARE_NAME:Marlin V1; Sprinter/grbl mashup for " SOLI_BOARD " - " MOD_TYPE " FIRMWARE_URL:" FIRMWARE_URL " PROTOCOL_VERSION:" PROTOCOL_VERSION " MACHINE_TYPE:" MACHINE_NAME " EXTRUDER_COUNT:" STRINGIFY(EXTRUDERS) "\n"
 	#define MSG_COUNT_X " Laskuri X: "
 	#define MSG_ERR_KILLED "Tulostin pysaytetty. kill():ia kutsuttu!"
 	#define MSG_ERR_STOPPED "Tulostin pysaytetty virheiden vuoksi. Korjaa virheet ja kayta M999 kaynnistaaksesi uudelleen. (Lampotila nollattiin. Aseta lampotila sen jalkeen kun jatkat.)"

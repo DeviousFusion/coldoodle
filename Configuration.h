@@ -50,7 +50,7 @@
 #endif
 
 // Define this to set a custom name for your generic Mendel,
-#define CUSTOM_MENDEL_NAME "Coldoodle"
+#define CUSTOM_MENDEL_NAME "SoliCube3D 2nd Gen"
 
 //// The following define selects which power supply you have. Please choose the one that matches your setup
 // 1 = ATX
@@ -182,10 +182,10 @@
 //if PREVENT_DANGEROUS_EXTRUDE is on, you can still disable (uncomment) very long bits of extrusion separately.
 #define PREVENT_LENGTHY_EXTRUDE
 
-#define EXTRUDE_MINTEMP .0 // Allow cold extrusion by default
+#define EXTRUDE_MINTEMP 160
 #define EXTRUDE_MAXLENGTH (X_MAX_LENGTH+Y_MAX_LENGTH) //prevent extrusion of very large distances.
 
-#define DISABLE_TEMP_SENSOR true
+#define DISABLE_BED_TEMP_SENSOR true
 
 //===========================================================================
 //=============================Mechanical Settings===========================
@@ -250,11 +250,11 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 #define min_software_endstops false //If true, axis won't move to coordinates less than HOME_POS.
 #define max_software_endstops false  //If true, axis won't move to coordinates greater than the defined lengths below.
 // Travel limits after homing
-#define X_MAX_POS 195
+#define X_MAX_POS 130
 #define X_MIN_POS 0
-#define Y_MAX_POS 195
+#define Y_MAX_POS 130
 #define Y_MIN_POS 0
-#define Z_MAX_POS 195
+#define Z_MAX_POS 130
 #define Z_MIN_POS 0
 
 #define X_MAX_LENGTH (X_MAX_POS - X_MIN_POS)
@@ -276,9 +276,9 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 
 // default settings 
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {88,88,2268,138}  // default steps per unit for ultimaker 
-#define DEFAULT_MAX_FEEDRATE          {500, 500, 5, 45}    // (mm/sec)    
-#define DEFAULT_MAX_ACCELERATION      {1200,1200,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {88,88,88,138}  // default steps per unit for ultimaker 
+#define DEFAULT_MAX_FEEDRATE          {500, 500, 500, 45}    // (mm/sec)    
+#define DEFAULT_MAX_ACCELERATION      {1200,1200,1200,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
 #define DEFAULT_ACCELERATION          1000    // X, Y, Z and E max acceleration in mm/s^2 for printing moves 
 #define DEFAULT_RETRACT_ACCELERATION  1000   // X, Y, Z and E max acceleration in mm/s^2 for r retracts
@@ -326,11 +326,11 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 
 // Preheat Constants
 #define PLA_PREHEAT_HOTEND_TEMP 160 
-#define PLA_PREHEAT_HPB_TEMP 70
+#define PLA_PREHEAT_HPB_TEMP 15
 #define PLA_PREHEAT_FAN_SPEED 255		// Insert Value between 0 and 255
 
 #define ABS_PREHEAT_HOTEND_TEMP 190
-#define ABS_PREHEAT_HPB_TEMP 95
+#define ABS_PREHEAT_HPB_TEMP 15
 #define ABS_PREHEAT_FAN_SPEED 255		// Insert Value between 0 and 255
 
 
@@ -362,4 +362,3 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 #include "thermistortables.h"
 
 #endif //__CONFIGURATION_H
-
